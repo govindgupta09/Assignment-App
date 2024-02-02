@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_feed"
+        android:title="@string/feed"
+        android:icon="@drawable/ic_feed" />
+
+    <item
+        android:id="@+id/menu_explore"
+        android:title="@string/explore"
+        android:icon="@drawable/ic_explore" />
+
+    <item
+        android:id="@+id/menu_receipt"
+        android:title="@string/receipt"
+        android:icon="@drawable/ic_receipt" />
+
+    <item
+        android:id="@+id/menu_like"
+        android:title="@string/like"
+        android:icon="@drawable/ic_like" />
+
+    <item
+        android:id="@+id/menu_account"
+        android:title="@string/account"
+        android:icon="@drawable/ic_account" />
+</menu>

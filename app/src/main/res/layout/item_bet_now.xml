@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/background_item_bet_now"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/img_flag1"
+        android:padding="10dp"
+        android:src="@drawable/img_flag_espanyol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_vs"
+        android:text="VS"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/img_flag1"
+        app:layout_constraintStart_toEndOf="@id/img_flag1"
+        app:layout_constraintEnd_toStartOf="@id/img_flag2"
+        app:layout_constraintBottom_toBottomOf="@id/img_flag1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_espanyol"
+        android:text="Espanyol"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/img_flag1"
+        app:layout_constraintEnd_toEndOf="@id/img_flag1"
+        app:layout_constraintTop_toBottomOf="@id/img_flag1"/>
+
+    <ImageView
+        android:id="@+id/img_flag2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="15dp"
+        android:src="@drawable/img_flag_madrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_madrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atl. Madrid"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/img_flag2"
+        app:layout_constraintStart_toStartOf="@id/img_flag2"
+        app:layout_constraintTop_toBottomOf="@id/img_flag2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_flag1_score"
+        android:layout_marginTop="10dp"
+        android:text="7"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/tv_espanyol"
+        app:layout_constraintTop_toBottomOf="@id/tv_espanyol"
+        app:layout_constraintEnd_toEndOf="@id/tv_espanyol"/>
+
+    <TextView
+        android:id="@+id/tv_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="72 min"
+        android:textColor="#0C9C12"
+        app:layout_constraintStart_toEndOf="@id/tv_flag1_score"
+        app:layout_constraintEnd_toStartOf="@id/tv_flag2_score"
+        app:layout_constraintTop_toTopOf="@id/tv_flag1_score"
+        app:layout_constraintBottom_toBottomOf="@id/tv_flag2_score"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_flag2_score"
+        android:layout_marginTop="10dp"
+        android:text="2"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/tv_madrid"
+        app:layout_constraintTop_toBottomOf="@id/tv_madrid"
+        app:layout_constraintEnd_toEndOf="@id/tv_madrid"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_bet_now"
+        android:background="@drawable/background_bet_now"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_flag2_score">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_bet_now"
+            android:text="BET NOW"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#EFEFEF"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

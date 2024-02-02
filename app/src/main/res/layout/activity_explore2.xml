@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ExploreActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dashboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:layout_width="385dp"
+            android:layout_height="195dp"
+            android:id="@+id/firstElement"
+            android:background="@drawable/background_below_frame"
+            android:rotation="4"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/secondElement"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/background_middle_frame"
+            android:rotation="-4"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/firstElement" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="385dp"
+            android:layout_height="200dp"
+            android:background="@drawable/background_dashboard"
+            android:rotation="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_dashboard"
+                android:text="1. Will Leeds lead at half-time?"
+                android:textSize="22sp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/v_dashboard_coin"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/background_dashboard_coin"
+                app:layout_constraintStart_toStartOf="@id/tv_dashboard"
+                app:layout_constraintTop_toBottomOf="@id/tv_dashboard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_dashboard_coin_counts"
+                android:text="50 Coins"
+                android:textColor="#FFDD80"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="@id/v_dashboard_coin"
+                app:layout_constraintStart_toEndOf="@id/v_dashboard_coin"
+                app:layout_constraintBottom_toBottomOf="@id/v_dashboard_coin"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/arrow"
+                android:src="@drawable/img_arrow"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="@id/x_times"
+                app:layout_constraintBottom_toTopOf="@id/x_times"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/x_times"
+                android:background="@drawable/background_x_times"
+                android:elevation="5dp"
+                app:layout_constraintTop_toTopOf="@id/tv_dashboard_coin_counts"
+                app:layout_constraintBottom_toBottomOf="@id/tv_dashboard_coin_counts"
+                app:layout_constraintStart_toEndOf="@id/tv_dashboard_coin_counts"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_1x"
+                    android:elevation="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/background_1x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_1x"
+                        android:text="1X"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_2x"
+                    android:elevation="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintStart_toEndOf="@id/cl_1x"
+                    app:layout_constraintTop_toTopOf="@id/cl_1x"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_1x">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_2x"
+                        android:text="2X"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_3x"
+                    android:elevation="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintStart_toEndOf="@id/cl_2x"
+                    app:layout_constraintTop_toTopOf="@id/cl_2x"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_2x">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_3x"
+                        android:text="3X"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_4x"
+                    android:elevation="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintStart_toEndOf="@id/cl_3x"
+                    app:layout_constraintTop_toTopOf="@id/cl_3x"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_3x">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_4x"
+                        android:text="4X"
+                        android:textColor="#FFCD6D"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_low_opacity_fire"
+                    app:layout_constraintStart_toStartOf="@id/cl_4x"
+                    app:layout_constraintEnd_toEndOf="@id/cl_4x"
+                    app:layout_constraintTop_toTopOf="@id/cl_4x"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_4x"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dashboard_yes"
+                android:background="@drawable/background_yes_no"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="@id/tv_dashboard"
+                app:layout_constraintTop_toBottomOf="@id/x_times"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_dashboard_yes"
+                    android:text="YES"
+                    android:textSize="22dp"
+                    android:padding="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dashboard_no"
+                android:background="@drawable/background_yes_no"
+                app:layout_constraintStart_toEndOf="@id/dashboard_yes"
+                app:layout_constraintTop_toTopOf="@id/dashboard_yes"
+                app:layout_constraintBottom_toBottomOf="@id/dashboard_yes"
+                app:layout_constraintEnd_toStartOf="@id/tv_dashboard_skip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_dashboard_no"
+                    android:text="NO"
+                    android:textSize="22dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_dashboard_skip"
+                android:textColor="@color/white"
+                android:text="SKIP"
+                android:textSize="16dp"
+                android:layout_marginEnd="35dp"
+                app:layout_constraintTop_toTopOf="@id/dashboard_no"
+                app:layout_constraintBottom_toBottomOf="@id/dashboard_no"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:id="@+id/dashboard"-->
+    <!--                android:background="@drawable/background_dashboard"-->
+    <!--                android:layout_margin="10dp"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_questions"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/tv_match_preview">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/tv_dashboard"-->
+    <!--                    android:text="1. Will Leeds lead at half-time?"-->
+    <!--                    android:textSize="22dp"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent"-->
+    <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+    <!--                <View-->
+    <!--                    android:id="@+id/v_dashboard_coin"-->
+    <!--                    android:layout_width="15dp"-->
+    <!--                    android:layout_height="15dp"-->
+    <!--                    android:layout_alignParentStart="true"-->
+    <!--                    android:layout_alignParentTop="true"-->
+    <!--                    android:layout_alignParentEnd="true"-->
+    <!--                    android:layout_alignParentBottom="true"-->
+    <!--                    android:layout_marginTop="30dp"-->
+    <!--                    android:background="@drawable/background_dashboard_coin"-->
+    <!--                    app:layout_constraintStart_toStartOf="@id/tv_dashboard"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/tv_dashboard_coin_counts"-->
+    <!--                    android:text="50 Coins"-->
+    <!--                    android:textColor="#FFDD80"-->
+    <!--                    android:textSize="16sp"-->
+    <!--                    android:layout_marginStart="5dp"-->
+    <!--                    app:layout_constraintTop_toTopOf="@id/v_dashboard_coin"-->
+    <!--                    app:layout_constraintStart_toEndOf="@id/v_dashboard_coin"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="@id/v_dashboard_coin"/>-->
+
+    <!--                <ImageView-->
+    <!--                    android:layout_width="15dp"-->
+    <!--                    android:layout_height="15dp"-->
+    <!--                    android:id="@+id/arrow"-->
+    <!--                    android:src="@drawable/img_arrow"-->
+    <!--                    android:layout_marginStart="25dp"-->
+    <!--                    app:layout_constraintStart_toStartOf="@id/x_times"-->
+    <!--                    app:layout_constraintBottom_toTopOf="@id/x_times"-->
+    <!--                    />-->
+
+    <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/x_times"-->
+    <!--                    android:layout_marginEnd="15dp"-->
+    <!--                    android:background="@drawable/background_x_times"-->
+    <!--                    android:elevation="5dp"-->
+    <!--                    app:layout_constraintTop_toTopOf="@id/tv_dashboard_coin_counts"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="@id/tv_dashboard_coin_counts"-->
+    <!--                    app:layout_constraintEnd_toEndOf="parent">-->
+
+    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:id="@+id/cl_1x"-->
+    <!--                        android:elevation="8dp"-->
+    <!--                        android:paddingStart="10dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        android:background="@drawable/background_1x"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+    <!--                        app:layout_constraintTop_toTopOf="parent"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="parent">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:id="@+id/tv_1x"-->
+    <!--                            android:text="1X"-->
+    <!--                            android:textColor="@color/white"-->
+    <!--                            android:layout_margin="15dp"-->
+    <!--                            android:textStyle="bold"-->
+    <!--                            app:layout_constraintStart_toStartOf="parent"-->
+    <!--                            app:layout_constraintTop_toTopOf="parent"-->
+    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:id="@+id/cl_2x"-->
+    <!--                        android:elevation="8dp"-->
+    <!--                        android:paddingStart="10dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        app:layout_constraintStart_toEndOf="@id/cl_1x"-->
+    <!--                        app:layout_constraintTop_toTopOf="@id/cl_1x"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@id/cl_1x">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:id="@+id/tv_2x"-->
+    <!--                            android:text="2X"-->
+    <!--                            android:textColor="@color/white"-->
+    <!--                            android:layout_margin="15dp"-->
+    <!--                            android:textStyle="bold"-->
+    <!--                            app:layout_constraintStart_toStartOf="parent"-->
+    <!--                            app:layout_constraintTop_toTopOf="parent"-->
+    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:id="@+id/cl_3x"-->
+    <!--                        android:elevation="8dp"-->
+    <!--                        android:paddingStart="10dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        app:layout_constraintStart_toEndOf="@id/cl_2x"-->
+    <!--                        app:layout_constraintTop_toTopOf="@id/cl_2x"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@id/cl_2x">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:id="@+id/tv_3x"-->
+    <!--                            android:text="3X"-->
+    <!--                            android:textColor="@color/white"-->
+    <!--                            android:layout_margin="15dp"-->
+    <!--                            android:textStyle="bold"-->
+    <!--                            app:layout_constraintStart_toStartOf="parent"-->
+    <!--                            app:layout_constraintTop_toTopOf="parent"-->
+    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:id="@+id/cl_4x"-->
+    <!--                        android:elevation="8dp"-->
+    <!--                        android:paddingStart="10dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        app:layout_constraintStart_toEndOf="@id/cl_3x"-->
+    <!--                        app:layout_constraintTop_toTopOf="@id/cl_3x"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@id/cl_3x">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:id="@+id/tv_4x"-->
+    <!--                            android:text="4X"-->
+    <!--                            android:textColor="#FFCD6D"-->
+    <!--                            android:layout_margin="15dp"-->
+    <!--                            android:textStyle="bold"-->
+    <!--                            app:layout_constraintStart_toStartOf="parent"-->
+    <!--                            app:layout_constraintTop_toTopOf="parent"-->
+    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                    <ImageView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:background="@drawable/img_low_opacity_fire"-->
+    <!--                        app:layout_constraintStart_toStartOf="@id/cl_4x"-->
+    <!--                        app:layout_constraintEnd_toEndOf="@id/cl_4x"-->
+    <!--                        app:layout_constraintTop_toTopOf="@id/cl_4x"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@id/cl_4x"/>-->
+
+    <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/dashboard_yes"-->
+    <!--                    android:background="@drawable/background_yes_no"-->
+    <!--                    android:layout_marginTop="35dp"-->
+    <!--                    android:layout_marginEnd="10dp"-->
+    <!--                    android:layout_marginBottom="10dp"-->
+    <!--                    app:layout_constraintStart_toStartOf="@id/tv_dashboard"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_coin_counts"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:id="@+id/tv_dashboard_yes"-->
+    <!--                        android:text="YES"-->
+    <!--                        android:textSize="22dp"-->
+    <!--                        android:padding="10dp"-->
+    <!--                        android:layout_marginStart="35dp"-->
+    <!--                        android:layout_marginEnd="35dp"-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+    <!--                        app:layout_constraintTop_toTopOf="parent"-->
+    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/dashboard_no"-->
+    <!--                    android:background="@drawable/background_yes_no"-->
+    <!--                    app:layout_constraintStart_toEndOf="@id/dashboard_yes"-->
+    <!--                    app:layout_constraintTop_toTopOf="@id/dashboard_yes"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="@id/dashboard_yes"-->
+    <!--                    app:layout_constraintEnd_toStartOf="@id/tv_dashboard_skip">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:id="@+id/tv_dashboard_no"-->
+    <!--                        android:text="NO"-->
+    <!--                        android:textSize="22dp"-->
+    <!--                        android:paddingTop="10dp"-->
+    <!--                        android:paddingStart="15dp"-->
+    <!--                        android:paddingEnd="15dp"-->
+    <!--                        android:paddingBottom="10dp"-->
+    <!--                        android:layout_marginStart="35dp"-->
+    <!--                        android:layout_marginEnd="35dp"-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+    <!--                        app:layout_constraintTop_toTopOf="parent"-->
+    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/tv_dashboard_skip"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:text="SKIP"-->
+    <!--                    android:textSize="16dp"-->
+    <!--                    android:layout_marginEnd="35dp"-->
+    <!--                    app:layout_constraintTop_toTopOf="@id/dashboard_no"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="@id/dashboard_no"-->
+    <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+    <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
